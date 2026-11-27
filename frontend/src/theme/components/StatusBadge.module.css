@@ -1,0 +1,9 @@
+.badge {
+  display: inline-block; padding: 2px var(--space-3); border-radius: var(--radius-pill);
+  font-size: 13px; line-height: 20px; font-weight: var(--weight-bold); white-space: nowrap;
+}
+.neutral { background: var(--color-status-neutral-bg); color: var(--color-status-neutral-fg); }
+.info { background: var(--color-status-info-bg); color: var(--color-status-info-fg); }
+.success { background: var(--color-status-success-bg); color: var(--color-status-success-fg); }
+.warning { background: var(--color-status-warning-bg); color: var(--color-status-warning-fg); }
+.danger { background: var(--color-status-danger-bg); color: var(--color-status-danger-fg); }

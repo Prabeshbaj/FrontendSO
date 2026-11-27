@@ -1,0 +1,85 @@
+/*
+ * Design tokens. Values measured from investor.vanguard.com on 2026-11-27.
+ * This file is the only place raw colours, sizes and fonts live. When the
+ * internal UI library is adopted, map these variables to its tokens or delete
+ * this file and the wrappers in ./components.
+ */
+:root {
+  /* Font: brand family is injected by fonts.ts from config; Arial is the site's own fallback. */
+  --font-brand: 'FF Mark';
+  --font-sans: var(--font-brand), Arial, Helvetica, sans-serif;
+
+  /* Colour */
+  --color-ink: #040505;
+  --color-text: #1a1a1a;
+  --color-text-muted: #717777;
+  --color-text-subtle: #555555;
+  --color-text-inverse: #ffffff;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f6f6;
+  --color-surface-dark: #040505;
+  --color-surface-dark-2: #3f4444;
+  --color-border: #e8e9e9;
+  --color-border-strong: #040505;
+  --color-brand-red: #c20029;
+  --color-link: #145bff;
+  --color-info: #0071de;
+  --color-info-surface: #e6f1fc;
+  --color-overlay: rgb(0 0 0 / 0.5);
+  --color-focus: #145bff;
+
+  /*
+   * Status colours were NOT on the reference page. Placeholders only:
+   * replace with the internal library's values before release.
+   */
+  --color-status-neutral-bg: #f5f6f6;
+  --color-status-neutral-fg: #3f4444;
+  --color-status-info-bg: #e6f1fc;
+  --color-status-info-fg: #004a94;
+  --color-status-success-bg: #e8f5ec;
+  --color-status-success-fg: #1d6b34;
+  --color-status-warning-bg: #fdf3e1;
+  --color-status-warning-fg: #7a4b00;
+  --color-status-danger-bg: #fbe9ec;
+  --color-status-danger-fg: #a10022;
+
+  /* Type scale: size / line-height (px). Weights 400, 700, 800. */
+  --text-display: 92px;   --leading-display: 96px;
+  --text-h1: 68px;        --leading-h1: 72px;
+  --text-h2: 57px;        --leading-h2: 64px;
+  --text-h3: 46px;        --leading-h3: 48px;
+  --text-h4: 34px;        --leading-h4: 40px;
+  --text-h5: 28px;        --leading-h5: 32px;
+  --text-lead: 23px;      --leading-lead: 32px;
+  --text-body: 17px;      --leading-body: 24px;
+  --text-small: 14px;     --leading-small: 20px;
+  --text-caption: 11px;   --leading-caption: 20px;
+  --weight-regular: 400;
+  --weight-bold: 700;
+  --weight-heavy: 800;
+
+  /* Spacing (most used values on the site) */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 56px;
+  --space-9: 80px;
+  --space-10: 112px;
+
+  /* Shape and elevation */
+  --radius-pill: 80px;
+  --radius-card: 32px;
+  --radius-control: 8px; /* suggestion for dense inputs; not measured */
+  --border-width: 2px;
+  --shadow-card: 0 1px 1px rgb(4 5 5 / 0.18), 0 0 4px 1px rgb(4 5 5 / 0.06);
+
+  /* Layout. Breakpoints (for reference in JS; CSS uses literal values in media queries):
+     sm 576, md 768, lg 992, xl 1200, xxl 1400 */
+  --container-max: 1140px;
+  --container-narrow: 730px;
+  --header-height: 72px;
+}
