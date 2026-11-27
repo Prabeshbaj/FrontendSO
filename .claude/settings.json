@@ -8,7 +8,9 @@
       "Bash(npx vitest run *)",
       "Bash(git status)",
       "Bash(git diff *)",
-      "Bash(git log *)"
+      "Bash(git log *)",
+      "Bash(scripts/sync-backend-docs.sh *)",
+      "Bash(scripts/sync-backend-docs.sh)"
     ],
     "ask": [
       "Bash(git push *)",

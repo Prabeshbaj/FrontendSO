@@ -8,6 +8,7 @@ FR-xx, FR-yy
 - Decisions relied on: D-xx
 - Open items touched (and the assumption made): O-xx / none
 - `decisions.md` updated in BackendSo: yes (link) / not needed
+- [ ] `scripts/sync-backend-docs.sh --check` passes (run the sync if BackendSo docs changed)
 
 ## API contract
 - [ ] No change, or `docs/api-contract.md` and Zod schemas updated together (backend PR: link)
