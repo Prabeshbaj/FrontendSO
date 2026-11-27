@@ -19,7 +19,10 @@ export function AppShell() {
       <a href="#main" className={styles.skip}>Skip to main content</a>
       <header className={styles.header}>
         <div className={`container ${styles.bar}`}>
-          <NavLink to="/" className={styles.brand}>SOC Report Review</NavLink>
+          <NavLink to="/" className={styles.brand}>
+            <span className={styles.brandMark} aria-hidden="true" />
+            SOC Report Review
+          </NavLink>
           <button
             type="button"
             className={styles.menuToggle}
