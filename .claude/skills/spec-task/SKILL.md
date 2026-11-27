@@ -5,10 +5,10 @@ disable-model-invocation: true
 ---
 Write the spec for task $ARGUMENTS. Do not edit code.
 
-1. Find the task row in `BackendSo`'s `docs/implementation-plan.md`. If you cannot read
-   it, ask the human to paste the row. Note its Refs.
-2. Read the FR-xx requirements it covers, the D-xx and O-xx items it references in
-   `decisions.md`, and `docs/api-contract.md`.
+1. Run `scripts/sync-backend-docs.sh --check`. If it reports stale files, ask the human
+   to sync first. Find the task row in `docs/backend/implementation-plan.md`. Note its Refs.
+2. Read the FR-xx requirements it covers in `docs/backend/requirements.md`, the D-xx and
+   O-xx items in `docs/backend/decisions.md`, and `docs/api-contract.md`.
 3. Read the existing code the task touches. Reuse components in `src/theme/components`.
 4. List every Open (O-xx) item the task depends on. If one blocks the task, stop and say so.
 5. Ask the human about the hard parts: edge cases, empty and error states, roles, anything
