@@ -19,7 +19,7 @@ does not define routes yet. Routes below that are not built are marked *planned*
 
 ## Report status lifecycle
 
-From architecture-v2 §3. `SIGNED_OFF` is an assumption.
+From architecture-v2 §3. Sign-off is by one analyst (D-28); there is no manager review step.
 
 ```
 UPLOADING -> EXTRACTING -> EXTRACTED -> COMPARING -> READY_FOR_REVIEW -> SIGNED_OFF
@@ -27,8 +27,9 @@ UPLOADING -> EXTRACTING -> EXTRACTED -> COMPARING -> READY_FOR_REVIEW -> SIGNED_
 any step -> FAILED (with a reason; never shown as partial)
 ```
 
-**TBD:** whether sign-off is one analyst, or analyst then manager. This decides whether a
-`MANAGER_REVIEW` state is needed. Do not build either until it is answered.
+Sign-off: one analyst signs off once every change has an analyst action (FR-16, D-28). The
+API returns 409 otherwise and records `signedOffBy` and the time. `SIGNED_OFF` is final; no
+`MANAGER_REVIEW` state exists. The tool still records no vendor decision (D-08).
 
 ## Routes
 
