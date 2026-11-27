@@ -2,7 +2,7 @@
 
 React SPA for third-party risk analysts. They review what changed between a vendor's SOC
 report and the prior year's, then sign off. The backend (Python, Step Functions, Textract,
-Bedrock, DynamoDB, CloudFormation) lives in a separate repo: `<backend-repo>` (name TBD).
+Bedrock, DynamoDB, CloudFormation) lives in a separate repo: [`Prabeshbaj/BackendSo`](https://github.com/Prabeshbaj/BackendSo).
 
 App code is in `frontend/`. Run every npm command from there.
 
@@ -17,7 +17,7 @@ App code is in `frontend/`. Run every npm command from there.
 | `frontend/README.md` | Folder structure and env vars |
 
 Requirements (FR-xx), architecture, `decisions.md` (D-xx, O-xx) and the task list (T-xx) live
-in the backend repo's `docs/`. Decided items are binding. Never assume an answer to an Open
+in `BackendSo/docs/`. Decided items are binding. Never assume an answer to an Open
 (O-xx) item: stop and ask. If docs disagree, stop and ask.
 
 ## Rules with no exceptions

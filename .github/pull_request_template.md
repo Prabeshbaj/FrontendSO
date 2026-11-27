@@ -7,7 +7,7 @@ FR-xx, FR-yy
 ## Decisions
 - Decisions relied on: D-xx
 - Open items touched (and the assumption made): O-xx / none
-- `decisions.md` updated in the backend repo: yes (link) / not needed
+- `decisions.md` updated in BackendSo: yes (link) / not needed
 
 ## API contract
 - [ ] No change, or `docs/api-contract.md` and Zod schemas updated together (backend PR: link)

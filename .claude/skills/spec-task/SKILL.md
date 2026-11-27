@@ -5,7 +5,7 @@ disable-model-invocation: true
 ---
 Write the spec for task $ARGUMENTS. Do not edit code.
 
-1. Find the task row in the backend repo's `docs/implementation-plan.md`. If you cannot read
+1. Find the task row in `BackendSo`'s `docs/implementation-plan.md`. If you cannot read
    it, ask the human to paste the row. Note its Refs.
 2. Read the FR-xx requirements it covers, the D-xx and O-xx items it references in
    `decisions.md`, and `docs/api-contract.md`.
