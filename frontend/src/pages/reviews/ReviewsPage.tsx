@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Link, useSearchParams } from 'react-router'
+import { Link, useNavigate, useSearchParams } from 'react-router'
 import { createColumnHelper } from '@tanstack/react-table'
 import {
   REPORT_TYPES,
@@ -16,6 +16,7 @@ import {
   Alert,
   Button,
   DataTable,
+  PageHeader,
   Pagination,
   SearchField,
   Select,
@@ -80,6 +81,7 @@ const columns = col.columns([
 const EMPTY: Review[] = []
 
 export function ReviewsPage() {
+  const navigate = useNavigate()
   const [params, setParams] = useSearchParams()
   const search = parseReviewSearch(params)
   const [query, setQuery] = useState(search.q)
@@ -97,13 +99,17 @@ export function ReviewsPage() {
   const hasFilters = Boolean(search.q || search.status || search.reportType || search.year)
 
   return (
-    <div className="container">
-      <div className={styles.heading}>
-        <h1>Reviews</h1>
-        <p className={styles.lead}>
-          Search past and in-progress SOC report reviews by vendor, period, status and report type.
-        </p>
-      </div>
+    <>
+      <PageHeader
+        title="Reviews"
+        lead="Search past and in-progress SOC report reviews by vendor, period, status and report type."
+        actions={
+          <Button variant="accent" onPress={() => navigate('/uploads')}>
+            Upload report
+          </Button>
+        }
+      />
+      <div className="container">
 
       <section aria-label="Search and filters" className={styles.filters}>
         <div className={styles.search}>
@@ -172,6 +178,7 @@ export function ReviewsPage() {
           )}
         </div>
       )}
-    </div>
+      </div>
+    </>
   )
 }
