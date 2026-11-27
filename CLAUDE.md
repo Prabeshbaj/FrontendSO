@@ -6,19 +6,27 @@ Bedrock, DynamoDB, CloudFormation) lives in a separate repo: [`Prabeshbaj/Backen
 
 App code is in `frontend/`. Run every npm command from there.
 
+## Binding decisions
+
+@docs/backend/decisions.md
+
 ## Read before working
 
 | File | When |
 |---|---|
+| `docs/backend/requirements.md` | The FR-xx / NFR-xx a task covers |
+| `docs/backend/implementation-plan.md` | Picking a task. Frontend tasks are T-27 to T-31 |
+| `docs/backend/architecture.md` | How the backend works: flow §3, data model §8, Excel §9 |
 | `docs/api-contract.md` | Any work that calls the API or changes a mock |
 | `docs/testing.md` | Before writing or changing tests |
 | `docs/frontend-stack-and-design-tokens.md` | Any UI or styling work |
 | `docs/specs/T-xx-*.md` | The spec for the task you are on. Write one first (`/spec-task T-xx`) |
 | `frontend/README.md` | Folder structure and env vars |
 
-Requirements (FR-xx), architecture, `decisions.md` (D-xx, O-xx) and the task list (T-xx) live
-in `BackendSo/docs/`. Decided items are binding. Never assume an answer to an Open
-(O-xx) item: stop and ask. If docs disagree, stop and ask.
+`docs/backend/` is a read-only mirror of BackendSo's `docs/` (source of truth, D-27). Never
+edit it here: change BackendSo, then run `scripts/sync-backend-docs.sh`. Decided items are
+binding. Never assume an answer to an Open (O-xx) item: stop and ask. If docs disagree, stop
+and ask.
 
 ## Rules with no exceptions
 
@@ -47,6 +55,8 @@ npm run typecheck     # tsc -b
 npm test              # vitest run; use `npx vitest run <path>` for one file
 npm run build
 ```
+
+From the repo root: `scripts/sync-backend-docs.sh` (update mirrors), `--check` (verify).
 
 Done means `npm run lint && npm run typecheck && npm test && npm run build` all pass.
 

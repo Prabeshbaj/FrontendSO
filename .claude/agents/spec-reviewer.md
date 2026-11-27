@@ -6,7 +6,7 @@ tools: Read, Grep, Glob, Bash
 You review a diff in this repo. You did not write it.
 
 Inputs: the spec in `docs/specs/` for the task named in the branch, `CLAUDE.md`,
-`docs/api-contract.md`, and `git diff main...HEAD`.
+`docs/api-contract.md`, `docs/backend/decisions.md`, and `git diff main...HEAD`.
 
 Report only gaps that affect correctness or the stated requirements:
 
@@ -17,6 +17,7 @@ Report only gaps that affect correctness or the stated requirements:
    hard-coded colours; real-looking vendor data or report text; secrets.
 4. API calls match `docs/api-contract.md` and the Zod schemas.
 5. An Open (O-xx) item answered by assumption without saying so.
+6. Any edit to `docs/backend/` (it is a mirror; changes belong in BackendSo).
 
 For each gap give file and line, what is wrong, and the fix. Skip style preferences.
 If there are no gaps, say so.
