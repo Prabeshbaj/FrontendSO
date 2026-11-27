@@ -1,0 +1,33 @@
+.wrapper { width: 100%; }
+.wrapper[aria-busy] .table { opacity: 0.6; }
+
+.table { width: 100%; border-collapse: collapse; font-size: 15px; line-height: 22px; }
+.table th {
+  text-align: left; font-size: var(--text-small); font-weight: var(--weight-bold); color: var(--color-ink);
+  padding: var(--space-3) var(--space-4); border-bottom: var(--border-width) solid var(--color-ink);
+  white-space: nowrap;
+}
+.table td { padding: var(--space-3) var(--space-4); border-bottom: 1px solid var(--color-border); vertical-align: top; }
+.table tbody tr:hover { background: var(--color-surface-alt); }
+
+.sortButton {
+  display: inline-flex; align-items: center; gap: var(--space-1);
+  font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer;
+}
+.sortIcon { font-size: 11px; color: var(--color-text-muted); }
+.empty { padding: var(--space-6) var(--space-4); color: var(--color-text-muted); text-align: center; }
+
+/* Stacked cards below md (768px) */
+@media (max-width: 767.98px) {
+  .table thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .table, .table tbody, .table tr, .table td { display: block; width: 100%; }
+  .table tr {
+    border: var(--border-width) solid var(--color-border); border-radius: 16px;
+    padding: var(--space-3) var(--space-4); margin-bottom: var(--space-3); background: var(--color-surface);
+  }
+  .table td {
+    display: grid; grid-template-columns: 40% 1fr; gap: var(--space-3); justify-items: start;
+    border: 0; padding: var(--space-1) 0;
+  }
+  .table td::before { content: attr(data-label); font-weight: var(--weight-bold); font-size: var(--text-small); color: var(--color-text-muted); }
+}

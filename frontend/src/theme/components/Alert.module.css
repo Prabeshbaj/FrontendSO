@@ -1,0 +1,4 @@
+.alert { border-radius: 16px; padding: var(--space-4) var(--space-5); border-left: 6px solid; }
+.title { font-weight: var(--weight-bold); }
+.info { background: var(--color-info-surface); border-color: var(--color-info); }
+.danger { background: var(--color-status-danger-bg); border-color: var(--color-status-danger-fg); }
